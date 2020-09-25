@@ -1,0 +1,12 @@
+from easytello import tello
+
+drone=tello.Tello()
+a=drone.get_battery()
+print(a)
+drone.takeoff()
+
+for x in range (4):
+    drone.forward(100)
+    drone.cw(90)
+    
+drone.land()
